@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Site</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* MENU */
+header{
+    background:#1e293b;
+    color:white;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* MENU MOBILE */
+.menu-toggle{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .menu-icon{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#1e293b;
+        flex-direction:column;
+        text-align:center;
+        max-height:0;
+        overflow:hidden;
+        transition:0.4s;
+    }
+
+    .nav-links li{
+        padding:15px;
+    }
+
+    .menu-toggle:checked ~ .nav-links{
+        max-height:300px;
+    }
+}
+
+/* TELA INICIAL */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg, #0f172a, #2563eb);
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+/* SEÇÃO EXEMPLO */
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">MeuSite</div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Bem-vindo ao Meu Site</h1>
+        <p>Crie experiências incríveis com HTML, CSS e JavaScript.</p>
+        <a href="#sobre" class="btn">Saiba Mais</a>
+    </div>
+</section>
+
+<section id="sobre">
+    <div class="container">
+        <h2>Sobre</h2>
+        <p>Esta é uma seção para apresentar sua empresa, projeto ou portfólio.</p>
+    </div>
+</section>
+
+<section id="servicos">
+    <div class="container">
+        <h2>Serviços</h2>
+        <p>Descreva aqui os serviços oferecidos.</p>
+    </div>
+</section>
+
+<section id="contato">
+    <div class="container">
+        <h2>Contato</h2>
+        <p>Email: contato@meusite.com</p>
+    </div>
+</section>
+
+</body>
+</html>
